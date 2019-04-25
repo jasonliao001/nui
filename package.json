@@ -1,0 +1,25 @@
+{
+  "name": "nui",
+  "version": "1.0.0",
+  "description": "UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonliao001/nui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonliao001/nui/issues"
+  },
+  "homepage": "https://github.com/jasonliao001/nui#readme",
+  "devDependencies": {
+    "webpack": "^4.30.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
