@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-// import message from './docs/message.md';
+import message from './docs/message.md';
 
 Vue.use(Router);
 
@@ -9,7 +9,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: () => import('./docs/message.md')
+      component: message
+      // component: () => import('./docs/message.md')
     }
   ]
 });
