@@ -13,8 +13,9 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 const API = {
-  version: process.env.VERSION, // eslint-disable-line no-undef
-  install
+  version: process.env.VERSION,
+  install,
+  ...nui
 };
 
 module.exports.default = module.exports = API;
