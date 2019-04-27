@@ -1,0 +1,15 @@
+import Vue from 'vue';
+import Router from 'vue-router';
+// import message from './docs/message.md';
+
+Vue.use(Router);
+
+export default new Router({
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      component: () => import('./docs/message.md')
+    }
+  ]
+});

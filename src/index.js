@@ -1,20 +1,20 @@
-import Message from './components/Message';
-const components = {
+import Message from './components/message';
+const nui = {
   Message
 };
-const install = function(Vue, opts = {}) {
-  if (install.installed) return;
-};
 
+const install = function(Vue, opts = {}) {
+  Object.keys(nui).forEach(key => {
+    Vue.component(key, nui[key]);
+  });
+};
 // auto install
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
-
 const API = {
   version: process.env.VERSION, // eslint-disable-line no-undef
-  install,
-  ...components
+  install
 };
 
-module.exports.default = module.exports = API; // eslint-disable-line no-undef
+module.exports.default = module.exports = API;
