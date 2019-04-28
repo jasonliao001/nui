@@ -16,6 +16,7 @@
 
         delete sessionStorage.redirect;
         if (redirect && redirect != location.href) {
+          console.log('history');
           history.replaceState(null, null, redirect);
           document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
         } else {
