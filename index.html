@@ -8,5 +8,17 @@
   <body>
     <div id="app"></div>
     <script type="text/javascript" src="main.js"></script>
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+          document.body.setAttribute('message', 'This page was redirected by 404.html, from the route: ' + redirect);
+        } else {
+          document.body.setAttribute('message', 'This page was loaded directly from the index.html file');
+        }
+      })();
+    </script>
   </body>
 </html>
