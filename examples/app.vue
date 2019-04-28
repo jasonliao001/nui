@@ -4,6 +4,7 @@
     </div>
 </template>
 <script>
+import "highlight.js/styles/atom-one-dark.css";
 import demoBlock from "./components/demoBlock";
 export default {
     components: {
