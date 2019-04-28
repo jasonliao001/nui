@@ -4,6 +4,15 @@ const markdownRender = require('markdown-it')();
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
+function wrap(render) {
+  return function() {
+    return render
+      .apply(this, arguments)
+      .replace('<code v-pre class="', '<code class="hljs ')
+      .replace('<code>', '<code class="hljs">');
+  };
+}
+
 module.exports = {
   module: {
     rules: [
@@ -74,6 +83,13 @@ module.exports = {
               preset: 'default',
               breaks: true,
               preventExtract: true,
+              preprocess: function(MarkdownIt, source) {
+                MarkdownIt.renderer.rules.table_open = function() {
+                  return '<table class="table">';
+                };
+                MarkdownIt.renderer.rules.fence = wrap(MarkdownIt.renderer.rules.fence);
+                return source;
+              },
               use: [
                 [
                   require('markdown-it-container'),

@@ -7,13 +7,13 @@
             <span v-if="!showCode">查看代码</span>
             <span v-else>收起代码</span>
         </span>
-        <div class="demo-block-meta" v-if="$slots.default">
+        <!-- <div class="demo-block-meta" v-if="$slots.default">
             <slot></slot>
         </div>
         <span v-if="$slots.default" class="demo-block-code-icon" @click="showCode=!showCode">
             <span v-if="!showCode">查看代码</span>
             <span v-else>收起代码</span>
-        </span>
+        </span>-->
         <div class="demo-block-code" v-show="showCode">
             <slot name="highlight"></slot>
         </div>
@@ -180,18 +180,19 @@ export default {
         }
     }
     .demo-block-code {
-        background-color: #f7f7f7;
+        // background-color: #f7f7f7;
         font-size: 0;
-        padding: 16px 32px;
+        // padding: 16px 32px;
         box-sizing: border-box;
         code {
-            background-color: #f7f7f7;
-            font-family: Consolas, Menlo, Courier, monospace;
+            // background-color: #f7f7f7;
+            padding: 20px;
+            // font-family: Consolas, Menlo, Courier, monospace;
             border: none;
             display: block;
             font-size: 14px;
-            overflow: auto hidden;
-            width: 100%;
+            // overflow: auto hidden;
+            // width: 100%;s
         }
     }
     .demo-block-code pre {
@@ -229,7 +230,7 @@ section {
         color: #3f536e;
         font-size: 14px;
     }
-    table {
+    .table {
         width: 100%;
         background-color: #fff;
         color: #5e6d82;

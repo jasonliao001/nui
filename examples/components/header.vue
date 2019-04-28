@@ -27,7 +27,7 @@
 }
 </style>
 <template>
-    <header class="page-header" style="box-shadow:0 10px 60px 0 rgba(29,29,31,0.07)">
+    <header class="page-header">
         <div class="header-container">
             <router-link :to="{name: 'home'}">
                 <img src width="100" alt="logo">

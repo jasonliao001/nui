@@ -3,6 +3,7 @@ import App from './app.vue';
 import DemoBlock from './components/demoBlock.vue';
 import router from './router';
 import Nui from '../src/index';
+import 'highlight.js/styles/atom-one-dark.css';
 import '../src/styles/index.css';
 Vue.component('demo-block', DemoBlock);
 Vue.use(Nui);
