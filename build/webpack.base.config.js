@@ -1,6 +1,8 @@
 var path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const markdownRender = require('markdown-it')();
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV !== 'production';
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
@@ -45,6 +47,12 @@ module.exports = {
         test: /\.css$/,
         use: [
           'vue-style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
           { loader: 'css-loader', options: { importLoaders: 1 } },
           {
             loader: 'postcss-loader',
@@ -59,7 +67,20 @@ module.exports = {
         test: /\.less$/,
         use: [
           'vue-style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
           { loader: 'css-loader', options: { importLoaders: 1 } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [require('autoprefixer')]
+            }
+          },
           {
             loader: 'less-loader'
           }
@@ -67,7 +88,24 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader']
+        use: [
+          'vue-style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [require('autoprefixer')]
+            }
+          },
+          'sass-loader'
+        ]
       },
       { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, use: 'url-loader?limit=8192' },
       {
@@ -124,7 +162,15 @@ module.exports = {
       }
     ]
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[name].css' : '[name].[chuncHash:8].css'
+    })
+  ],
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {

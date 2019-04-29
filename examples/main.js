@@ -5,6 +5,8 @@ import router from './router';
 import Nui from '../src/index';
 import 'highlight.js/styles/atom-one-dark.css';
 import '../src/styles/index.css';
+import '../src/styles/index.less';
+import '../src/styles/index.scss';
 Vue.component('demo-block', DemoBlock);
 Vue.use(Nui);
 
