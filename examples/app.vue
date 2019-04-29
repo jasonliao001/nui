@@ -24,9 +24,22 @@ div {
     color: #ddd;
 }
 </style>
+
 <style>
-div {
-    color: blue;
+.ion-icon {
+    display: inline-block;
+    font-family: Ionicons;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    color: red;
 }
 </style>
 

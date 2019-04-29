@@ -30,7 +30,7 @@ export default {
     }
 };
 </script>
-<style lang='less'>
+<style lang='less' >
 .demo-block {
     border: 1px solid #ebedf0;
     border-radius: 2px;
