@@ -1,6 +1,8 @@
 import Message from './components/message';
+import Icon from './components/icon';
 const nui = {
-  Message
+  Message,
+  Icon
 };
 
 const install = function(Vue, opts = {}) {
@@ -8,12 +10,12 @@ const install = function(Vue, opts = {}) {
     Vue.component(key, nui[key]);
   });
 };
-// auto install
+
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 const API = {
-  version: process.env.VERSION, // eslint-disable-line no-undef
+  version: process.env.VERSION,
   install
 };
 

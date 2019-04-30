@@ -4,16 +4,10 @@
             <slot name="source"></slot>
         </div>
         <span class="demo-block-code-icon" v-if="!$slots.default" @click="showCode=!showCode">
+            <i class="ion-icon ion-ios-code-working"></i>
             <span v-if="!showCode">查看代码</span>
             <span v-else>收起代码</span>
         </span>
-        <!-- <div class="demo-block-meta" v-if="$slots.default">
-            <slot></slot>
-        </div>
-        <span v-if="$slots.default" class="demo-block-code-icon" @click="showCode=!showCode">
-            <span v-if="!showCode">查看代码</span>
-            <span v-else>收起代码</span>
-        </span>-->
         <div class="demo-block-code" v-show="showCode">
             <slot name="highlight"></slot>
         </div>
@@ -30,7 +24,7 @@ export default {
     }
 };
 </script>
-<style lang='less' >
+<style lang='less'>
 .demo-block {
     border: 1px solid #ebedf0;
     border-radius: 2px;
@@ -40,14 +34,6 @@ export default {
     margin: 16px 0 16px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    border-radius: 2px;
-    pre {
-        border: none !important;
-    }
-    p {
-        padding: 0;
-        margin: 0;
-    }
     .demo-block-code-icon {
         width: 100%;
         text-align: center;
@@ -57,23 +43,6 @@ export default {
         padding: 10px 0;
         background-color: #fafbfc;
         cursor: pointer;
-        img {
-            -webkit-transition: all 0.4s;
-            transition: all 0.4s;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            position: absolute;
-            left: 0;
-            top: 0;
-            margin: 0;
-            max-width: 100%;
-            width: 100%;
-            vertical-align: baseline;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-        }
     }
     .demo-block-source {
         border-bottom: 1px solid #ebedf0;
@@ -83,153 +52,22 @@ export default {
         margin-bottom: -1px;
     }
     .demo-block-meta {
-        position: relative;
-        padding: 12px 50px 12px 20px;
-        border-radius: 0 0 2px 2px;
-        -webkit-transition: background-color 0.4s;
-        transition: background-color 0.4s;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 14px;
-        color: #444;
-        font-size: 14px;
-        line-height: 2;
-        border-radius: 0;
-        border-bottom: 1px dashed #ebedf0;
-        margin-bottom: -1px;
     }
-    .demo-block-meta {
-        position: relative;
-        padding: 12px 50px 12px 20px;
-        border-radius: 0 0 2px 2px;
-        -webkit-transition: background-color 0.4s;
-        transition: background-color 0.4s;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 14px;
-        color: #444;
-        font-size: 14px;
-        line-height: 2;
-        border-radius: 0;
-        border-bottom: 1px dashed #ebedf0;
-        margin-bottom: -1px;
-    }
-    .demo-block-meta {
-        position: relative;
-        padding: 12px 50px 12px 20px;
-        border-radius: 0 0 2px 2px;
-        -webkit-transition: background-color 0.4s;
-        transition: background-color 0.4s;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 14px;
-        color: #444;
-        font-size: 14px;
-        line-height: 2;
-        border-radius: 0;
-        border-bottom: 1px dashed #ebedf0;
-        margin-bottom: -1px;
-    }
-    .demo-block-meta {
-        position: relative;
-        padding: 12px 50px 12px 20px;
-        border-radius: 0 0 2px 2px;
-        -webkit-transition: background-color 0.4s;
-        transition: background-color 0.4s;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 14px;
-        color: #444;
-        font-size: 14px;
-        line-height: 2;
-        border-radius: 0;
-        border-bottom: 1px dashed #ebedf0;
-        margin-bottom: -1px;
-    }
-    .demo-block-meta {
-        position: relative;
-        padding: 12px 50px 12px 20px;
-        border-radius: 0 0 2px 2px;
-        -webkit-transition: background-color 0.4s;
-        transition: background-color 0.4s;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 14px;
-        color: #444;
-        font-size: 14px;
-        line-height: 2;
-        border-radius: 0;
-        border-bottom: 1px dashed #ebedf0;
-        margin-bottom: -1px;
-        code {
-            color: #444;
-            background-color: #e6effb;
-            margin: 0 4px;
-            display: inline-block;
-            padding: 3px 7px;
-            border-radius: 3px;
-            height: 18px;
-            line-height: 18px;
-            font-family: Menlo, Monaco, Consolas, Courier, monospace;
-            font-size: 14px;
-        }
-    }
+
     .demo-block-code {
-        // background-color: #f7f7f7;
-        font-size: 0;
-        // padding: 16px 32px;
-        box-sizing: border-box;
-        code {
-            // background-color: #f7f7f7;
-            padding: 20px;
-            // font-family: Consolas, Menlo, Courier, monospace;
-            border: none;
-            display: block;
-            font-size: 14px;
-            // overflow: auto hidden;
-            // width: 100%;s
+        pre {
+            font-size: 0;
+            code {
+                padding: 20px;
+                border: none;
+                display: block;
+                font-size: 14px;
+            }
         }
     }
-    .demo-block-code pre {
-        margin: 0;
-        padding: 0;
-    }
 }
-.sh-checkbox {
-    color: #444;
-    font-weight: 500;
-    font-size: 14px;
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    white-space: nowrap;
-    user-select: none;
-}
+
 section {
-    h1 {
-        margin: 16px 0;
-        line-height: 1.5;
-        margin-top: 0;
-    }
-    h3 {
-        margin: 16px 0;
-    }
-    hr {
-        margin: 1.2em 0;
-        border: 0;
-        border-bottom: 1px solid #c5d9e8;
-    }
-    p {
-        padding: 0;
-        line-height: 1.7;
-        color: #3f536e;
-        font-size: 14px;
-    }
     .table {
         width: 100%;
         background-color: #fff;

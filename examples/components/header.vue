@@ -1,46 +1,60 @@
-<style type="text/less" lang="less">
-.page-header {
-    background-color: #fff;
-    box-shadow: 0 10px 60px 0 rgba(29, 29, 31, 0.07);
-    opacity: 0.98;
-    position: relative !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    transition: all 0.3s;
-    z-index: 100;
-    .header-container {
-        width: 90%;
-        margin: 0 auto;
+<template>
+    <div class="header">
+        <div class="header-container">
+            <h1 class="logo">
+                <router-link to="/">
+                    <i class="ion-icon ion-ios-airplane"></i>&nbsp;Nui
+                </router-link>
+            </h1>
+            <ul class="header-nav">
+                <li class="components">
+                    <router-link to="/docs/icon">
+                        <span>组件</span>
+                    </router-link>
+                </li>
+                <li class="page-header-item">
+                    <a
+                        href="https://github.com/jasonliao001/nui"
+                        class="header-item-github"
+                        target="_blank"
+                    >
+                        <i class="ion-icon ion-logo-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="less">
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .log {
+        .ion-ios-cafe {
+            vertical-align: initial;
+        }
+    }
+    .header-nav {
+        text-align: right;
         display: flex;
-        align-items: center;
-        height: 80px;
         justify-content: space-between;
-        img {
-            display: block;
-            width: 80px;
-            height: 80px;
-            background-color: #fff;
+        align-items: center;
+        .components {
+            margin-right: 20px;
+        }
+        .ion-icon {
+            font-size: 32px;
         }
     }
 }
 </style>
-<template>
-    <header class="page-header">
-        <div class="header-container">
-            <router-link :to="{name: 'home'}">
-                <img src width="100" alt="logo">
-            </router-link>
-            <router-link :to="{name: 'home'}">组件</router-link>
-        </div>
-    </header>
-</template>
-
-<script>
-export default {
-    data() {
-        return {};
-    }
-};
-</script>
