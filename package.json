@@ -10,6 +10,7 @@
   "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --compress  --config build/webpack.dev.config.js",
+    "create:md": "node examples/createMd.js",
     "dist:prod": "webpack  --config build/webpack.dist.prod.config.js",
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:docs": "webpack --config build/webpack.dist.docs.config.js"

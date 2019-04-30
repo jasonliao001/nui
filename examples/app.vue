@@ -5,12 +5,10 @@
             <main-body></main-body>
         </template>
         <div class="main-container" v-else>
-            <template>
-                <side-nav></side-nav>
-                <div class="markdown-content">
-                    <router-view></router-view>
-                </div>
-            </template>
+            <side-nav></side-nav>
+            <div class="markdown-content">
+                <router-view></router-view>
+            </div>
         </div>
     </div>
 </template>

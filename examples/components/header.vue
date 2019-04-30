@@ -8,7 +8,7 @@
             </h1>
             <ul class="header-nav">
                 <li class="components">
-                    <router-link to="/docs/icon">
+                    <router-link to="/intro">
                         <span>组件</span>
                     </router-link>
                 </li>
