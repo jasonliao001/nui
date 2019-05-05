@@ -6,3 +6,4 @@ npm-debug.log.*
 .vscode
 .npmrc
 dist
+package-lock.json
