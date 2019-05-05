@@ -1,0 +1,62 @@
+:root {
+  --primary: #3880ff;
+  --primary-shade: #2d66cc;
+  --primary-tint: #4c8dff;
+  --Secondary: #0cd1e8;
+  --Secondary-shade: #0aa7ba;
+  --Secondary-tint: #24d6ea;
+  --Tertiary: #7044ff;
+  --Tertiary-shade: #5a36cc;
+  --Tertiary-tint: #7e57ff;
+  --Success: #10dc60;
+  --Success-shade: #0db04d;
+  --Success-tint: #28e070;
+  --Warning: #ffce00;
+  --Warning-shade: #cca500;
+  --Warning-tint: #ffd319;
+  --Danger: #f04141;
+  --Danger-shade: #c03434;
+  --Danger-tint: #f25454;
+  --Dark: #222428;
+  --Dark-shade: #1b1d20;
+  --Dark-tint: #383a3d;
+  --Medium: #989aa2;
+  --Medium-shade: #7a7b82;
+  --Medium-tint: #a2a4ab;
+  --Light: #f4f5f8;
+  --Light-shade: #c3c4c6;
+  --Light-tint: #f5f6f9;
+}
+.color-menu-text {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 55px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.color-menu-value {
+  margin-left: auto;
+  padding-right: 40px;
+}
+.color-menu {
+  color: #fff;
+}
+.color-menu-item {
+  margin-bottom: 5px;
+}
+.class-meni-icon {
+  margin-right: 10px;
+}
+.color-submenu-item .color-menu-text {
+  height: 40px;
+  margin-right: 16px;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: none;
+}
+
