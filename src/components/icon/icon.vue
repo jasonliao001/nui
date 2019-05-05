@@ -14,9 +14,7 @@ export default {
     },
     computed: {
         classes() {
-            return this.custom
-                ? this.custom
-                : `${prefixCls} ${prefixCls}-${this.type}`;
+            return this.custom ? this.custom : `${prefixCls} ion-${this.type}`;
         }
     }
 };

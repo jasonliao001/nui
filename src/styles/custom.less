@@ -1,0 +1,56 @@
+// color
+@primary-color : #3880ff;
+@Secondary-color: #0cd1e8;
+@Dark: #222428;
+@Medium: #989aa2;
+@Light: #f4f5f8;
+@info-color : @Secondary-color;
+@success-color : #10dc60;
+@warning-color : #ffce00;
+@error-color : #f04141;
+@link-color : @primary-color;
+@link-hover-color : tint(@link-color, 20%);
+@link-active-color : shade(@link-color, 5%);
+@selected-color : fade(@primary-color, 90%);
+// base-color
+@title-color : @Dark;
+@text-color :  shade(@Dark,20%);
+// Border color
+@border-color-base: @Light;
+// Background color
+@head-bg : @Light;
+//base
+@body-background : #fff;
+@font-family : "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+@font-size-base : 14px;
+@font-size-small : 12px;
+@line-height-base : 1.5;
+@border-radius-base : 6px;
+@border-radius-small : 4px;
+@cursor-disabled : not-allowed;
+
+// Shadow
+@shadow-color : rgba(0, 0, 0, .2);
+@shadow-base : @shadow-down;
+@shadow-card : 0 1px 1px 0 rgba(0,0,0,.1);
+@shadow-up : 0 -1px 6px @shadow-color;
+@shadow-down : 0 1px 6px @shadow-color;
+@shadow-left : -1px 0 6px @shadow-color;
+@shadow-right : 1px 0 6px @shadow-color;
+
+// Z-index
+@zindex-spin : 8;
+@zindex-affix : 10;
+@zindex-back-top : 10;
+@zindex-select : 900;
+@zindex-modal : 1000;
+@zindex-message : 1010;
+@zindex-notification : 1010;
+@zindex-tooltip : 1060;
+@zindex-transfer : 1060;
+@zindex-loading-bar : 2000;
+
+// Animation
+@animation-time : .3s;
+@transition-time : .2s;
+@ease-in-out : ease-in-out;

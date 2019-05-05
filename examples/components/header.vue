@@ -39,6 +39,7 @@ export default {};
     padding-right: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
     .log {
         .ion-ios-cafe {
             vertical-align: initial;

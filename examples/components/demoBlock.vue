@@ -46,7 +46,7 @@ export default {
     }
     .demo-block-source {
         border-bottom: 1px solid #ebedf0;
-        padding: 20px 24px 20px;
+        padding: 10px 20px;
         color: #444;
         position: relative;
         margin-bottom: -1px;
@@ -58,7 +58,7 @@ export default {
         pre {
             font-size: 0;
             code {
-                padding: 20px;
+                padding: 10px 20px;
                 border: none;
                 display: block;
                 font-size: 14px;

@@ -71,26 +71,23 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .side-nav {
     flex: 0 0 250px;
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid #989aa2;
     .nav-item {
         a {
             font-size: 16px;
-            color: #333;
             line-height: 40px;
             height: 40px;
             margin: 0;
             padding: 0;
-            text-decoration: none;
             display: block;
             position: relative;
             transition: all 0.3s;
             padding: 0 20px;
             &.active {
-                color: #3388ff;
-                background-color: #f2f2f2;
+                background-color: #f4f5f8;
             }
         }
         .nav-item {
@@ -100,15 +97,12 @@ export default {
                 line-height: 40px;
                 font-size: 14px;
                 padding-left: 44px;
-                &:hover {
-                    color: #3388ff;
-                }
             }
         }
     }
     .nav-group-title {
         font-size: 12px;
-        color: #666;
+        color: #989aa2;
         padding-left: 28px;
         line-height: 26px;
         margin-top: 10px;
