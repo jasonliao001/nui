@@ -4,8 +4,7 @@ const nui = {
   Message,
   Icon
 };
-
-const install = function(Vue, opts = {}) {
+const install = function(Vue) {
   Object.keys(nui).forEach(key => {
     Vue.component(key, nui[key]);
   });

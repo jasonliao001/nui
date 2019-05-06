@@ -14,7 +14,8 @@
     "dist:prod": "webpack  --config build/webpack.dist.prod.config.js",
     "dist:style": "gulp --gulpfile build/build-style.js",
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
-    "dist:docs": "webpack --config build/webpack.dist.docs.config.js"
+    "dist:docs": "webpack --config build/webpack.dist.docs.config.js",
+    "lint": "eslint --fix --ext .js,.vue src"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,8 @@
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
     "file-loader": "^3.0.1",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
