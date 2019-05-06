@@ -8,6 +8,8 @@
 
 - [x] 使用 markdown-it 实现文档编写
 
+- [x] 使用 eslint 代码检测
+
 - [x] 使用 Glup4 打包样式文件
 
 - [x] npm 发布 包名为 prettier-ui
