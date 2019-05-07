@@ -15,7 +15,8 @@
     "dist:style": "gulp --gulpfile build/build-style.js",
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:docs": "webpack --config build/webpack.dist.docs.config.js",
-    "dist": "npm run lint && npm run dist:nui && npm run dist:style",
+    "dist:locale": "webpack --config build/webpack.dist.locale.config.js",
+    "dist": "npm run lint && npm run dist:nui && npm run dist:style && npm run dist:locale",
     "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
@@ -87,6 +88,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "deepmerge": "^3.2.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6"
   },
