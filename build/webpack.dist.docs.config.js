@@ -4,7 +4,7 @@ var merge = require('webpack-merge');
 var webpackBaseConfig = require('./webpack.base.config.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = merge(webpackBaseConfig, {
   mode: 'production',
   entry: {

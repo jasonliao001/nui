@@ -1,5 +1,5 @@
 var fs = require('fs');
-var navigate = require('./nav.config.js');
+var navigate = require('../../examples/nav.config.js');
 const dir = 'examples';
 navigate.forEach(item => {
   if (item.groups && item.groups.length) {

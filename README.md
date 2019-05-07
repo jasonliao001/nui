@@ -12,6 +12,8 @@
 
 - [x] 使用 Glup4 打包样式文件
 
+- [x] 单元测试 karma+mocha+chai
+
 - [x] npm 发布 包名为 prettier-ui
 
 - [x] 上线文档

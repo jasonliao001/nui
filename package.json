@@ -10,14 +10,18 @@
   "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --compress  --config build/webpack.dev.config.js",
-    "create:md": "node examples/createMd.js",
-    "dist:prod": "webpack  --config build/webpack.dist.prod.config.js",
+    "create:md": "node build/.bin/createMd.js",
+    "dist:nui": "webpack  --config build/webpack.dist.prod.config.js",
     "dist:style": "gulp --gulpfile build/build-style.js",
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:docs": "webpack --config build/webpack.dist.docs.config.js",
+    "dist": "npm run lint && npm run dist:nui && npm run dist:style",
+    "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --fix --ext .js,.vue src"
+    "release": "sh build/release.sh",
+    "test:coverage": "find test/unit/coverage/lcov-report -name 'index.html' | sed -n 1,1p  | xargs -I {} open {}",
+    "deploy": "npm run dist:docs && gh-pages -d examples/dist"
   },
   "repository": {
     "type": "git",
@@ -82,7 +86,6 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "chai": "^4.2.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6"
   },
