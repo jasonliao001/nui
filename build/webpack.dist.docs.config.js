@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var merge = require('webpack-merge');
 var webpackBaseConfig = require('./webpack.base.config.js');
@@ -22,6 +23,7 @@ module.exports = merge(webpackBaseConfig, {
     }
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
