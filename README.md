@@ -14,9 +14,9 @@ npm i prettier-ui -S
 
 ```
 <!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/prettier-ui/dist/nui-css/index.css">
+<link rel="stylesheet" href="https://unpkg.com/prettier-ui/dist/styles/nui.css">
 <!-- 引入组件库 -->
-<script src="https://unpkg.com/nui-css/dist/nui.js"></script>
+<script src="https://unpkg.com/prettier-ui/dist/nui.min.js"></script>
 ```
 
 ## 快速开始
