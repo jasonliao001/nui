@@ -14,7 +14,7 @@
 span {
     display: inline-block;
     width: 19ch;
-    font: bold 400% Consolas, Monaco, monospace; /*Monospaced font*/
+    font: bold 400% Consolas, Monaco, monospace;
     overflow: hidden;
     white-space: nowrap;
     font-weight: 500;
@@ -31,4 +31,3 @@ span {
     }
 }
 </style>
-    
