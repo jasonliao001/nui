@@ -20,5 +20,5 @@ then
   # echo "cd dist"
   # npm login
   npm version $VERSION --message "[release] $VERSION"
-  npm publish
+  # npm publish
 fi
