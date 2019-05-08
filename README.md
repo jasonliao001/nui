@@ -1,4 +1,4 @@
-# [Nui](https://jasonliao001.github.io/prettier/)
+# [Prettier-ui](https://jasonliao001.github.io/prettier/)
 
 > 9102 年了，还没有自己的 UI 组件库，要被时代所抛弃。
 
@@ -40,7 +40,7 @@ npm install babel-plugin-import --save-dev
 // .babelrc
 {
   "plugins": [["import", {
-    "libraryName": "prettier",
+    "libraryName": "prettier-ui",
     "libraryDirectory": "src/components"
   }]]
 }
