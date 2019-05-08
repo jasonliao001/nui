@@ -16,7 +16,7 @@
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:docs": "webpack --config build/webpack.dist.docs.config.js",
     "dist:locale": "webpack --config build/webpack.dist.locale.config.js",
-    "dist": "npm run lint && npm run dist:prettier && npm run dist:style && npm run dist:locale",
+    "dist": "npm run dist:prettier && npm run dist:style && npm run dist:locale",
     "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",

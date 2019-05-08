@@ -1,7 +1,7 @@
 var path = require('path');
 var merge = require('webpack-merge');
 var webpackBaseConfig = require('./webpack.base.config.js');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = merge(webpackBaseConfig, {
   mode: 'production',
   entry: {
@@ -22,5 +22,6 @@ module.exports = merge(webpackBaseConfig, {
       commonjs2: 'vue',
       amd: 'vue'
     }
-  }
+  },
+  plugins: [new CleanWebpackPlugin()]
 });

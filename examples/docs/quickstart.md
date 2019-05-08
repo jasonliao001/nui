@@ -5,8 +5,10 @@
 <p style="padding: 10px 0;">一般在 webpack 入口页面 main.js 中如下配置：</p>
 
 ```script
+  import Vue from 'vue';
   import Prettier from 'prettier-ui';
   import 'prettier-ui/dist/styles/prettier.css';
+  Vue.use(Prettier)
 ```
 
 <h3 style="padding-top: 10px ;"> 按需加载 </h3>
