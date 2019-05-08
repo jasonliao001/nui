@@ -29,7 +29,6 @@ export default {
     display: flex;
     padding: 20px;
     border-top: 1px solid #989aa2;
-
     .markdown-content {
         flex: 1;
         padding: 0 20px;

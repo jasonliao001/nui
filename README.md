@@ -1,4 +1,4 @@
-# [Prettier-ui](https://jasonliao001.github.io/prettier/)
+# [Prettier-ui](https://jasonliao001.github.io/prettier-ui/)
 
 > 9102 年了，还没有自己的 UI 组件库，要被时代所抛弃。
 

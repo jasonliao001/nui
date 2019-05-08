@@ -76,8 +76,6 @@ export default {
     flex: 0 0 250px;
     border-right: 1px solid #989aa2;
     .nav-item {
-        // background: rgba(83,150,255,.14);
-
         a {
             font-size: 16px;
             line-height: 40px;

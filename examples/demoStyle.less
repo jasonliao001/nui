@@ -1,20 +1,32 @@
 @import '../src/styles/custom.less';
 blockquote {
   p {
-    padding: 10px 0px;
+    padding: 10px;
   }
+}
+p {
+  padding: 10px;
+  padding-top: 0;
+}
+h2 {
+  color: @Dark-color;
 }
 h3 {
   padding: 0px 0px 10px;
-  color: tint(#222428, 15%);
+  color: tint(@Dark-color, 20%);
+  font-weight: 400;
 }
 h4 {
   padding: 0px 0px 10px;
-  color: tint(#222428, 20%);
+  padding-left: 10px;
+  color: tint(@Dark-color, 35%);
+  font-weight: 400;
 }
 h5 {
   padding: 0px 0px 10px;
-  color: tint(#222428, 25%);
+  padding-left: 10px;
+  color: tint(@Dark-color, 50%);
+  font-weight: 400;
 }
 .ion-ios-checkmark-circle-extra {
   margin-right: 10px;
@@ -22,5 +34,28 @@ h5 {
 }
 code {
   font-family: @code-family;
-  font-size: 14px;
+  font-size: 13px;
+  padding: 1em !important;
+  line-height: 1.8;
+  color: @Medium-color!important;
+  margin-bottom: 10px;
+}
+section {
+  .table {
+    width: 100%;
+    background-color: #fff;
+    color: #5e6d82;
+    font-size: 14px;
+    border-collapse: collapse;
+    overflow: auto;
+    th,
+    td {
+      border-top: 1px solid #f3f7fa;
+      border-bottom: 1px solid #f3f7fa;
+      padding: 10px 8px;
+    }
+    th {
+      background-color: #fafbfc;
+    }
+  }
 }
