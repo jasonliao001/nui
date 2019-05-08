@@ -1,9 +1,9 @@
 import Vue from 'vue';
 
-import nui from '../src/index';
-// import nui from 'main/index.js';
+import prettier from '../src/index';
+// import prettier from 'main/index.js';
 
-Vue.use(nui);
+Vue.use(prettier);
 
 let id = 0;
 

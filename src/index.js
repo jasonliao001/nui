@@ -1,15 +1,15 @@
 import Message from './components/message';
 import Icon from './components/icon';
 import locale from './locale';
-const nui = {
+const prettier = {
   Message,
   Icon
 };
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
-  Object.keys(nui).forEach(key => {
-    Vue.component(key, nui[key]);
+  Object.keys(prettier).forEach(key => {
+    Vue.component(key, prettier[key]);
   });
 };
 

@@ -15,7 +15,7 @@ then
   VERSION=$VERSION npm run dist
 
   # publish dist
-  echo "Releasing nui $VERSION ..."
+  echo "Releasing prettier $VERSION ..."
   cd  dist
   npm login
   npm version $VERSION --message "[release] $VERSION"

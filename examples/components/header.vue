@@ -3,7 +3,7 @@
         <div class="header-container">
             <h1 class="logo">
                 <router-link to="/">
-                    <i class="ion-icon ion-ios-airplane"></i>&nbsp;Nui
+                    <i class="ion-icon ion-ios-airplane"></i>&nbsp;Prettier
                 </router-link>
             </h1>
             <ul class="header-nav">
@@ -14,7 +14,7 @@
                 </li>
                 <li class="page-header-item">
                     <a
-                        href="https://github.com/jasonliao001/nui"
+                        href="https://github.com/jasonliao001/prettier"
                         class="header-item-github"
                         target="_blank"
                     >

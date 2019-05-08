@@ -10,8 +10,8 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
-    filename: 'nui.min.js',
-    library: 'nui',
+    filename: 'prettier.min.js',
+    library: 'prettier',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

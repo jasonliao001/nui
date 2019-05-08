@@ -15,7 +15,7 @@ gulp.task('css', async () => {
       })
     )
     .pipe(cleanCSS())
-    .pipe(rename('nui.css'))
+    .pipe(rename('prettier.css'))
     .pipe(gulp.dest('../dist/styles'));
 });
 

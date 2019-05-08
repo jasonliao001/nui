@@ -1,4 +1,4 @@
-# [Nui](https://jasonliao001.github.io/nui/)
+# [Nui](https://jasonliao001.github.io/prettier/)
 
 > 9102 年了，还没有自己的 UI 组件库，要被时代所抛弃。
 
@@ -14,9 +14,9 @@ npm i prettier-ui -S
 
 ```
 <!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/prettier-ui/dist/styles/nui.css">
+<link rel="stylesheet" href="https://unpkg.com/prettier-ui/dist/styles/prettier.css">
 <!-- 引入组件库 -->
-<script src="https://unpkg.com/prettier-ui/dist/nui.min.js"></script>
+<script src="https://unpkg.com/prettier-ui/dist/prettier.min.js"></script>
 ```
 
 ## 快速开始
@@ -25,9 +25,9 @@ npm i prettier-ui -S
 
 ```
 import Vue from 'vue'
-import nui from 'prettier-ui';
-import 'prettier-ui/dist/styles/nui.css';
-Vue.use(nui)
+import prettier from 'prettier-ui';
+import 'prettier-ui/dist/styles/prettier.css';
+Vue.use(prettier)
 ```
 
 ### 按需引用
@@ -40,7 +40,7 @@ npm install babel-plugin-import --save-dev
 // .babelrc
 {
   "plugins": [["import", {
-    "libraryName": "nui",
+    "libraryName": "prettier",
     "libraryDirectory": "src/components"
   }]]
 }

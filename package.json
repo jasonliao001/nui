@@ -2,7 +2,7 @@
   "name": "prettier-ui",
   "version": "1.0.2",
   "description": "UI",
-  "main": "dist/nui.js",
+  "main": "dist/prettier.js",
   "files": [
     "dist",
     "src"
@@ -11,12 +11,12 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --compress  --config build/webpack.dev.config.js",
     "create:md": "node build/.bin/createMd.js",
-    "dist:nui": "webpack  --config build/webpack.dist.prod.config.js",
+    "dist:prettier": "webpack  --config build/webpack.dist.prod.config.js",
     "dist:style": "gulp --gulpfile build/build-style.js",
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:docs": "webpack --config build/webpack.dist.docs.config.js",
     "dist:locale": "webpack --config build/webpack.dist.locale.config.js",
-    "dist": "npm run lint && npm run dist:nui && npm run dist:style && npm run dist:locale",
+    "dist": "npm run lint && npm run dist:prettier && npm run dist:style && npm run dist:locale",
     "lint": "eslint --fix --ext .js,.vue src",
     "unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "test": "npm run unit",
@@ -26,14 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jasonliao001/nui.git"
+    "url": "git+https://github.com/jasonliao001/prettier.git"
   },
   "author": "bxliao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jasonliao001/nui/issues"
+    "url": "https://github.com/jasonliao001/prettier/issues"
   },
-  "homepage": "https://github.com/jasonliao001/nui#readme",
+  "homepage": "https://github.com/jasonliao001/prettier#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",

@@ -11,8 +11,8 @@ default: help
 create-md:
 	node build/.bin/createMd.js
 
-dist-nui:
-	npm run dist:nui
+dist-prettier:
+	npm run dist:prettier
 
 dist-style:
 	npm run dist:style
@@ -45,7 +45,7 @@ help:
 	@echo "   \033[35mmake install\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  安装依赖"
 	@echo "   \033[35mmake create-md\033[0m\t\033[0m\t\033[0m\t---  创建文档文件"
 	@echo "   \033[35mmake dist-style\033[0m\t\033[0m\t\033[0m\t---  style打包"
-	@echo "   \033[35mmake build-nui\033[0m\t\033[0m\t\033[0m\t---  压缩打包"
+	@echo "   \033[35mmake build-prettier\033[0m\t\033[0m\t\033[0m\t---  压缩打包"
 	@echo "   \033[35mmake deploy\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  gp文档发布"
 	@echo "   \033[35mmake dist\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  集体打包"
 	@echo "   \033[35mmake test\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  unit测试"
