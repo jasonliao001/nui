@@ -32,30 +32,50 @@ h5 {
   margin-right: 10px;
   color: @primary-color;
 }
+.ion-ios-copy-extra {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+.success-cls {
+  color: @success-color;
+}
 code {
   font-family: @code-family;
   font-size: 13px;
   padding: 1em !important;
-  line-height: 1.8;
-  color: @Medium-color!important;
+  line-height: 1.5;
+  color: shade(@Medium-color, 30%) !important;
   margin-bottom: 10px;
+  background-color: @Light-color!important;
+}
+.demo-block-code {
+  position: relative;
 }
 section {
   .table {
+    // border: 1px solid #f3f7fa;
     width: 100%;
     background-color: #fff;
     color: #5e6d82;
     font-size: 14px;
     border-collapse: collapse;
     overflow: auto;
+    thead,
+    tbody {
+      border: 1px solid shade(@Light-color, 5%);
+    }
+    thead {
+      border-bottom: none;
+    }
+
     th,
     td {
-      border-top: 1px solid #f3f7fa;
-      border-bottom: 1px solid #f3f7fa;
       padding: 10px 8px;
     }
     th {
-      background-color: #fafbfc;
+      background-color: shade(@Light-color, 2%);
     }
   }
 }

@@ -5,34 +5,60 @@
         </div>
         <span class="demo-block-code-icon" v-if="!showCode" @click="showCode=!showCode">
             <i class="ion-icon ion-ios-arrow-dropdown-circle ion-ios-code-working-extra"></i>
-            <!-- <span v-if="!showCode">Show Code</span> -->
-            <!-- <span v-else>收起代码</span> -->
         </span>
-
         <div class="demo-block-code" v-show="showCode">
-            <slot name="highlight"></slot>
+            <i
+                :class="['ion-icon','ion-ios-copy-extra','copy',{'ion-ios-copy':!copied,'ion-ios-checkmark-circle':copied,'success-cls':copied}]"
+                @click="clip"
+            ></i>
+            <div ref="code">
+                <slot name="highlight"></slot>
+            </div>
         </div>
         <span class="demo-block-code-icon" v-if="showCode" @click="showCode=!showCode">
             <i class="ion-icon ion-ios-arrow-dropup-circle ion-ios-code-working-extra"></i>
-            <!-- <span v-else>收起代码</span> -->
         </span>
     </div>
 </template>
 
 <script>
+import Clipboard from "clipboard";
 export default {
     name: "DemoBlock",
     data() {
         return {
-            showCode: false
+            showCode: false,
+            code: "",
+            copied: false
         };
+    },
+    mounted() {},
+    methods: {
+        clip() {
+            const code = this.$refs.code.textContent;
+            const clipboard = new Clipboard(".copy", {
+                text() {
+                    return code;
+                }
+            });
+
+            clipboard.on("success", e => {
+                e.clearSelection();
+                clipboard.destroy();
+                this.copied = true;
+                setTimeout(() => {
+                    this.copied = false;
+                }, 2000);
+            });
+        }
     }
 };
 </script>
 <style lang='less'>
 @import "../../src/styles/custom.less";
+
 .demo-block {
-    border: 1px solid #ebedf0;
+    border: 1px solid shade(@Light-color, 5%);
     border-radius: 4px;
     position: relative;
     margin: 16px 0 16px;

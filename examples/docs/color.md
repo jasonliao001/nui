@@ -1,6 +1,6 @@
 ## Color 色彩
 
-> 九种默认颜色，可用于改变许多组件的颜色
+> 九种默认颜色来构建整个 UI 的颜色体系
 
 <style lang='less'>
 @primary: #3880ff;
@@ -25,7 +25,7 @@
     --Success: @Success;
     --Success-shade: shade(@Success,20%);
     --Success-tint:  tint(@Success, 10%);
-    --Warning: @Warning;     
+    --Warning: @Warning;
     --Warning-shade: shade(@Warning,20%);
     --Warning-tint:  tint(@Warning, 10%);
     --Danger: @Danger;
@@ -62,7 +62,7 @@
 }
 .class-meni-icon{
     margin-right: 10px;
-    
+
 }
 .color-submenu-item .color-menu-text{
     height: 40px;
@@ -78,10 +78,10 @@
 </style>
 
 <ul class="color-menu">
-    <li class="color-menu-item" style="background-color: var(--primary)" > 
+    <li class="color-menu-item" style="background-color: var(--primary)" >
         <div class="color-menu-text">primary
             <div class="color-menu-value">#3880ff</div>
-            <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+            <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
         </div>
         <ul class="color-submenu hidden">
             <li class="color-submenu-item"  style="background-color: var(--primary-shade)">
@@ -99,7 +99,7 @@
     <li class="color-menu-item" style="background-color: var(--Secondary)">
         <div class="color-menu-text">Secondary
             <div class="color-menu-value">#0cd1e8</div>
-             <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+             <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
         </div>
         <ul class="color-submenu hidden">
             <li class="color-submenu-item" style="background-color: var(--Secondary-shade)">
@@ -117,7 +117,7 @@
     <li class="color-menu-item" style="background-color: var(--Tertiary)">
         <div class="color-menu-text">Tertiary
             <div class="color-menu-value">#7044ff</div>
-            <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+            <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
         </div>
         <ul class="color-submenu hidden">
             <li class="color-submenu-item" style="background-color: var(--Tertiary-shade)">
@@ -135,7 +135,7 @@
     <li class="color-menu-item" style="background-color: var(--Success)">
         <div class="color-menu-text">Success
         <div class="color-menu-value">#10dc60</div>
-        <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+        <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
         </div>
         <ul class="color-submenu hidden">
             <li class="color-submenu-item" style="background-color: var(--Success-shade)">
@@ -153,7 +153,7 @@
     <li class="color-menu-item" style="background-color: var(--Warning)">
         <div class="color-menu-text">Warning
         <div class="color-menu-value">#ffce00</div>
-         <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+         <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
          </div>
           <ul class="color-submenu hidden">
             <li class="color-submenu-item" style="background-color: var(--Warning-shade)">
@@ -171,7 +171,7 @@
     <li class="color-menu-item" style="background-color: var(--Danger)">
         <div class="color-menu-text">Danger
         <div class="color-menu-value">#f04141</div>
-         <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+         <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
          </div>
           <ul class="color-submenu hidden">
             <li class="color-submenu-item" style="background-color: var(--Danger-shade)">
@@ -189,7 +189,7 @@
     <li class="color-menu-item" style="background-color: var(--Dark)">
         <div class="color-menu-text">Dark
         <div class="color-menu-value">#222428</div>
-         <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+         <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
          </div>
           <ul class="color-submenu hidden">
             <li class="color-submenu-item"  style="background-color: var(--Dark-shade)">
@@ -207,7 +207,7 @@
     <li class="color-menu-item" style="background-color: var(--Medium)">
         <div class="color-menu-text">Medium
         <div class="color-menu-value">#989aa2</div>
-         <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+         <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
          </div>
           <ul class="color-submenu hidden">
             <li class="color-submenu-item" style="background-color: var(--Medium-shade)">
@@ -225,7 +225,7 @@
     <li class="color-menu-item" style="background-color: var(--Light);color:#000">
         <div class="color-menu-text">Light
         <div class="color-menu-value">#f4f5f8</div>
-         <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i>
+         <!-- <i class="ion-icon ion-ios-arrow-down class-meni-icon"> <i> -->
          </div>
           <ul class="color-submenu hidden">
             <li class="color-submenu-item" style="background-color: var(--Light-shade)">
@@ -243,36 +243,32 @@
 </ul>
 
 <script>
-   window.onload =  function(){
-        var eles =  document.querySelectorAll('.color-menu-text');
-        for(var i = 0;i<eles.length;i++){
-            eles[i].addEventListener('click',handleClick,false)
-        }
-        var submenu = document.querySelectorAll('.color-submenu'); 
-        function handleCls(cls,ele){
-             var clsReg = new RegExp(cls, 'ig');
-             var str = ele.className
-            
-            if(!clsReg.test(str)){
-                ele.className = ele.className + ' ' + cls
-            }else{
-                ele.className = ele.className.replace(cls, '')
-                 
-            }
-        }
-        function handleClick(e){
-            for(var i = 0;i<submenu.length;i++){
-              submenu[i].className='color-submenu hidden'
-            }
-            var ele = e.target;
-            while(ele.parentElement.nodeName !== 'LI' ){
-                ele = ele.parentElement
-            }
-            ele = ele.nextElementSibling
-            if(!ele)return;
-            handleCls('hidden',ele)      
-        }
-        
-        
-   }
+// (function() {
+  var eles = document.querySelectorAll('.color-menu-text');
+  for (var i = 0; i < eles.length; i++) {
+    eles[i].addEventListener('click', handleClick, false);
+  }
+  var submenu = document.querySelectorAll('.color-submenu');
+  function handleCls(cls, ele) {
+    var clsReg = new RegExp(cls, 'ig');
+    var str = ele.className;
+
+    if (!clsReg.test(str)) {
+      ele.className = ele.className + ' ' + cls;
+    } else {
+      ele.className = ele.className.replace(cls, '');
+    }
+  }
+  function handleClick(e) {
+    for (var i = 0; i < submenu.length; i++) {
+      submenu[i].className = 'color-submenu hidden';
+    }
+    var ele = e.target;
+    while (ele.parentElement.nodeName !== 'LI') {
+      ele = ele.parentElement;
+    }
+    ele = ele.nextElementSibling;
+    if (!ele) return;
+    handleCls('hidden', ele);
+  }
 </script>

@@ -56,6 +56,10 @@ const navList = [
         groupName: '布局',
         list: [
           {
+            path: '/grid',
+            title: 'Grid 格栅'
+          },
+          {
             path: '/layout',
             title: 'Layout 布局'
           }
@@ -80,7 +84,7 @@ const navList = [
         ]
       },
       {
-        groupName: '视图',
+        groupName: '反馈',
         list: [
           {
             path: '/message',
