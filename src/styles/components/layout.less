@@ -1,0 +1,40 @@
+@layout-prefix-cls: ~'@{css-prefix}layout';
+.@{layout-prefix-cls} {
+  &-flex {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    background: @Light-color;
+    .@{layout-prefix-cls}-header,
+    .@{layout-prefix-cls}-footer {
+      flex: 0 0 auto;
+    }
+    .@{layout-prefix-cls}-header {
+      background: @layout-header-background;
+      padding: @layout-header-padding;
+      height: @layout-header-height;
+      line-height: @layout-header-height;
+    }
+    .@{layout-prefix-cls}-footer {
+      background: @layout-footer-background;
+      padding: @layout-footer-padding;
+      color: @text-color;
+      font-size: @font-size-base;
+    }
+
+    .@{layout-prefix-cls}-content {
+      background: shade(@layout-footer-background, 10%);
+      flex: auto;
+    }
+  }
+  &-float {
+    // 两栏布局
+    // 左列定宽,右列自适应
+    &-col-2 {
+    }
+    &-
+    //  三栏布局
+    &-col-3 {
+    }
+  }
+}

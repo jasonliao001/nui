@@ -9,7 +9,7 @@ export default {
     name: "Footer",
     computed: {
         wrapClasses() {
-            return `${prefixCls}-header`;
+            return [`${prefixCls}-header`];
         }
     }
 };
