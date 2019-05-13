@@ -1,5 +1,5 @@
 
-
+# 自动发布版本
 #!/usr/bin/env sh
 set -e
 echo "Enter release version: "

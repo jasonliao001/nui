@@ -14,7 +14,7 @@
                 </li>
                 <li class="page-header-item">
                     <a
-                        href="https://github.com/jasonliao001/prettier"
+                        href="https://github.com/jasonliao001/prettier-ui"
                         class="header-item-github"
                         target="_blank"
                     >
