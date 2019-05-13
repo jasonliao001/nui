@@ -1,12 +1,22 @@
 import Message from './components/message';
 import Icon from './components/icon';
 import { Row, Col } from './components/grid';
+import Layout from './components/layout';
+import Content from './components/content';
+import Footer from './components/footer';
+import Header from './components/header';
+import Sider from './components/sider';
 import locale from './locale';
 const prettier = {
   Message,
   Icon,
   Row,
-  Column: Col
+  Column: Col,
+  Layout: Layout,
+  Lcontent: Content,
+  Lheader: Header,
+  Lfooter: Footer,
+  Lsider: Sider
 };
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);
