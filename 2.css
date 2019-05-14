@@ -1,62 +1,169 @@
-:root {
-  --primary: #3880ff;
-  --primary-shade: #2d66cc;
-  --primary-tint: #4c8dff;
-  --Secondary: #0cd1e8;
-  --Secondary-shade: #0aa7ba;
-  --Secondary-tint: #24d6ea;
-  --Tertiary: #7044ff;
-  --Tertiary-shade: #5a36cc;
-  --Tertiary-tint: #7e57ff;
-  --Success: #10dc60;
-  --Success-shade: #0db04d;
-  --Success-tint: #28e070;
-  --Warning: #ffce00;
-  --Warning-shade: #cca500;
-  --Warning-tint: #ffd319;
-  --Danger: #f04141;
-  --Danger-shade: #c03434;
-  --Danger-tint: #f25454;
-  --Dark: #222428;
-  --Dark-shade: #1b1d20;
-  --Dark-tint: #383a3d;
-  --Medium: #989aa2;
-  --Medium-shade: #7a7b82;
-  --Medium-tint: #a2a4ab;
-  --Light: #f4f5f8;
-  --Light-shade: #c3c4c6;
-  --Light-tint: #f5f6f9;
+
+.gutter {
+  margin-bottom: 10px;
 }
-.color-menu-text {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  height: 55px;
-  padding-left: 20px;
-  cursor: pointer;
+#left-1 {
+  background-color: #c6c6c9;
+  float: left;
+  width: 100px;
+  height: 50px;
 }
-.color-menu-value {
-  margin-left: auto;
-  padding-right: 40px;
+#right-1 {
+  background-color: #dcdddf;
+  height: 50px;
+  margin-left: 100px; /*设置间隔，大于等于#left的宽度*/
 }
-.color-menu {
-  color: #fff;
+#left-2 {
+  background-color: #c6c6c9;
+  float: left;
+  width: 100px;
+  height: 50px;
 }
-.color-menu-item {
-  margin-bottom: 5px;
+#right-2 {
+  background-color: #dcdddf;
+  height: 50px;
+  overflow: hidden; /*触发bfc达到自适应*/
 }
-.class-meni-icon {
-  margin-right: 10px;
+#parent-3 {
+  width: 100%;
+  display: table;
 }
-.color-submenu-item .color-menu-text {
-  height: 40px;
-  margin-right: 16px;
+#left-3 {
+  width: 100px;
+  height: 50px;
+  background-color: #c6c6c9;
 }
-.hidden {
-  display: none;
+#right-3 {
+  background-color: #dcdddf;
 }
-.show {
-  display: none;
+/*利用单元格自动分配宽度*/
+#left-3,
+#right-3 {
+  display: table-cell;
+}
+#parent-4 {
+  position: relative;
+} /*父相*/
+#left-4 {
+  position: absolute; /*子绝*/
+  top: 0;
+  left: 0;
+  background-color: #c6c6c9;
+  width: 100px;
+  height: 50px;
+}
+#right-4 {
+  position: absolute; /*子绝*/
+  top: 0;
+  left: 100px; /*值大于等于#left的宽度*/
+  right: 0;
+  background-color: #dcdddf;
+  height: 50px;
+}
+
+
+#parent-5 {
+  min-width: 310px;
+} /*100+10+200,防止宽度不够,子元素换行*/
+#left-5 {
+  margin-right: 10px; /*#left和#center间隔*/
+  float: left;
+  width: 100px;
+  height: 50px;
+  background-color: #c6c6c9;
+}
+#center-5 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background-color: #dcdddf;
+}
+#right-5 {
+  margin-left: 320px; /*等于#left和#center的宽度之和加上间隔,多出来的就是#right和#center的间隔*/
+  height: 50px;
+  background-color: #c6c6c9;
+}
+/*  */
+#header-6 {
+  height: 60px;
+  text-align: center;
+  background-color: #ccc;
+}
+#left-6 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-left: -100%; /*调整#left的位置,值等于自身宽度*/
+  background-color: #c6c6c9;
+  /* background-color: #f00; */
+  opacity: 0.5;
+}
+#center-6 {
+  height: 100px;
+  float: left;
+  width: 100%;
+  background-color: #dcdddf;
+}
+#center-inbox-6 {
+  height: 100px;
+  border: 1px solid #000;
+  margin: 0 220px 0 120px; /*关键!!!左右边界等于左右盒子的宽度,多出来的为盒子间隔*/
+}
+#right-6 {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin-left: -200px; /*使right到指定的位置,值等于自身宽度*/
+  background-color: #c6c6c9;
+  opacity: 0.5;
+}
+#footer-6 {
+  clear: both; /*注意清除浮动!!*/
+  height: 60px;
+  text-align: center;
+  background-color: #ccc;
+}
+/*  */
+#header-7 {
+  height: 60px;
+  text-align: center;
+  background-color: #ccc;
+}
+#parent-7 {
+  height: 100px;
+  padding: 0 215px 0 115px; /*为了使#center摆正,左右padding分别等于左右盒子的宽,可以结合左右盒子相对定位的left调整间距*/
+}
+#left-7 {
+  margin-left: -100%; /*使#left上去一行*/
+  position: relative;
+  left: -115px; /*相对定位调整#left的位置,正值大于或等于自身宽度*/
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: #c6c6c9;
+  opacity: 0.5;
+}
+#center-7 {
+  float: left;
+  width: 100%; /*由于#parent的padding,达到自适应的目的*/
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px solid #dcdddf;
+  background-color: #dcdddf;
+}
+#right-7 {
+  position: relative;
+  left: 215px; /*相对定位调整#right的位置,大于或等于自身宽度*/
+  width: 200px;
+  height: 100px;
+  margin-left: -200px; /*使#right上去一行*/
+  float: left;
+  background-color: #c6c6c9;
+  opacity: 0.5;
+}
+#footer-7 {
+  text-align: center;
+  height: 60px;
+  background-color: #ccc;
 }
 
