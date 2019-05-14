@@ -9,3 +9,4 @@ dist
 package-lock.json
 test/coverage
 test/unit/coverage
+test
