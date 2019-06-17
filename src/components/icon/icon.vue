@@ -2,14 +2,14 @@
     <i :class="classes"></i>
 </template>
 <script>
-const prefixCls = "ion-icon";
+const prefixCls = 'ion-icon';
 export default {
-    name: "Icon",
+    name: 'Icon',
     props: {
         type: String,
         custom: {
             type: String,
-            default: ""
+            default: ''
         }
     },
     computed: {
